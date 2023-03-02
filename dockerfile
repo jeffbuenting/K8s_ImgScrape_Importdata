@@ -7,4 +7,4 @@ WORKDIR /code
 COPY . /code
 
 # run python script
-CMD ["python", "main.py"]
+CMD ["python","-u","main.py"]
