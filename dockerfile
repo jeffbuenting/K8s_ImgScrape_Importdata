@@ -4,7 +4,8 @@ FROM python
 RUN mkdir =p /code
 WORKDIR /code
 
-COPY . /code
+COPY main.py /code
 
 # run python script
-CMD ["python","-u","main.py"]
+# CMD ["python","-u","main.py"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
