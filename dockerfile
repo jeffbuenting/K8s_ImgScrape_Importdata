@@ -4,6 +4,7 @@ FROM python
 RUN mkdir =p /code
 WORKDIR /code
 
+COPY requirements.txt /code
 COPY main.py /code
 
 RUN pip install -r requirements.txt
