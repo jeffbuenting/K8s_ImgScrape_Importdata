@@ -13,3 +13,9 @@ def testfunc( testarg ):
 if __name__ == "__main__":
     print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
     print(f"Dict format: {vars(args)}")
+
+
+
+    # run python script
+# CMD ["python","-u","main.py"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

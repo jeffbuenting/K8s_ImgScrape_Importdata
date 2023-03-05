@@ -9,6 +9,4 @@ COPY main.py /code
 
 RUN pip install -r requirements.txt
 
-# run python script
-# CMD ["python","-u","main.py"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+
