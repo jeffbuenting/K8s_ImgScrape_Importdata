@@ -25,7 +25,7 @@ if __name__ == "__main__":
         broker=args.broker
         port=args.port
 
-        print( "Normal Processing")
+        print( "Reading input file and passing to MQTT...")
         
         client= mqtt.Client("admin")
         client.on_publish = on_publish
@@ -37,11 +37,11 @@ if __name__ == "__main__":
                 print(row['Url'], row['Path'])
                 #publish message
                 ret= client.publish("/data",row)
-                
+
     else:
-        print("no input file specified.")
-        I = 0
-        while None == None:
-            print( "No Input: {}".format(I))
-            I += 1
-            time.sleep(30)
+        raise Exception("Missing required input")
+        # I = 0
+        # while None == None:
+        #     print( "No Input: {}".format(I))
+        #     I += 1
+        #     time.sleep(30)
