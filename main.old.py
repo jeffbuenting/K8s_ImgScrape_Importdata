@@ -2,17 +2,7 @@
 
 
 
-def on_publish(client,userdata,result):
-    print("Device 1 : Data published.")
-    pass
 
-if __name__ == "__main__":
-    if args.inputfile != None:
-        inputfile = args.inputfile
-        broker=args.broker
-        port=args.port
-
-        print( "Normal Processing")
 
         client= mqtt.Client("admin")
         client.on_publish = on_publish
