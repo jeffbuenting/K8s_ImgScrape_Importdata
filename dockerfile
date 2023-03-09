@@ -8,7 +8,7 @@ COPY requirements.txt /code
 COPY main.py /code
 
 # test file
-COPY c:\temp\input.csv /code
+COPY ../../temp/input.csv /code
 
 RUN pip install -r requirements.txt
 
