@@ -15,5 +15,5 @@ RUN pip install -r requirements.txt
 # run python script
 # CMD ["python","-u","main.py","--inputfile ~/test.csv","--broker 192.168.1.126","--port 8000"]
 # CMD ["python","-u","main.py --inputfile ~/test.csv"]
-CMD ["python","-u","main.py --inputfile /code/test.csv"]
+CMD ["python","-u","main.py --inputfile /code/input.csv"]
 
