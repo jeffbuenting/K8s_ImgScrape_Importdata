@@ -22,8 +22,8 @@ if __name__ == "__main__":
 
     if args.inputfile != None:
         inputfile = args.inputfile
-        broker=args.broker
-        port=args.port
+        # broker=args.broker
+        # port=args.port
 
         print( "Reading input file and passing to MQTT...")
         
