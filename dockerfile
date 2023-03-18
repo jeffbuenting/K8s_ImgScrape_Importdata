@@ -7,7 +7,7 @@ WORKDIR /code
 COPY requirements.txt /code
 COPY main.py /code
 
-# test file
-COPY input.csv /code
+# # test file
+# COPY input.csv /code
 
 RUN pip install -r requirements.txt
