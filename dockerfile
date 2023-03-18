@@ -11,3 +11,5 @@ COPY main.py /code
 # COPY input.csv /code
 
 RUN pip install -r requirements.txt
+
+CMD ["python","-u","main.py"]
