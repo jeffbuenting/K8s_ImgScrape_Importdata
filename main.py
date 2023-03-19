@@ -8,4 +8,13 @@ def on_publish(client,userdata,result):
     pass
 
 if __name__ == "__main__":
-    print( "hello world function" )
+    parser=argparse.ArgumentParser()
+
+    parser.add_argument("--inputfile", help="Input File")
+    # parser.add_argument("--broker", help="MQ Broker")
+    # parser.add_argument("--port", help="MQ Port")
+    args=parser.parse_args()
+
+    print("num args = ")
+    print(args)
+    print( "hello world args" )
