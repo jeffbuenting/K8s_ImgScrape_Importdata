@@ -12,5 +12,7 @@ COPY input.csv /code
 
 RUN pip install -r requirements.txt
 
+ENV INPUTFILE = input.csv
+
 # CMD ["python","-u","main.py","--inputfile","input.csv"]
-CMD ["python","-u","main.py","--inputfile","{$inputfile}"]
+CMD ["python","-u","main.py","--inputfile","{$INPUTFILE}"]
