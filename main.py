@@ -30,10 +30,10 @@ if __name__ == "__main__":
         # client.on_publish = on_publish
         # client.connect(broker,port)
         
-        # with open(inputfile, newline='') as csvfile:
-        #     inputdata = csv.DictReader(csvfile)
-        #     for row in inputdata:
-        #         print(row['Url'], row['Path'])
+        with open(inputfile, newline='') as csvfile:
+            inputdata = csv.DictReader(csvfile)
+            for row in inputdata:
+                print(row['Url'], row['Path'])
                 #publish message
                 # ret= client.publish("/data",row)
 
