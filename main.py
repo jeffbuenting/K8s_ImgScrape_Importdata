@@ -26,7 +26,8 @@ if __name__ == "__main__":
 
         if args.broker != None and args.port != None:
             broker=args.broker
-            port=args.port
+            # and convert string to int as docker env vars must be string
+            port=int(args.port)
 
             client= mqtt.Client("admin")
             client.on_publish = on_publish
