@@ -12,5 +12,9 @@ COPY input.csv /code
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["/bin/bash", "-c", "python -u main.py --inputfile $INPUTFILE"]
+# default env vars
+ENV BROKERHOST ""
+ENV PORT ""
+
+ENTRYPOINT ["/bin/bash", "-c", "python -u main.py --inputfile $INPUTFILE --broker $BROKERHOST --port $PORT"]
 
