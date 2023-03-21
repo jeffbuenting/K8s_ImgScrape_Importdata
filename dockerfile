@@ -14,5 +14,3 @@ RUN pip install -r requirements.txt
 
 ENTRYPOINT ["/bin/bash", "-c", "python -u main.py --inputfile $INPUTFILE"]
 
-# CMD ["python","-u","main.py","--inputfile","input.csv"]
-# CMD ["python","-u","main.py","--inputfile",$INPUTFILE]
