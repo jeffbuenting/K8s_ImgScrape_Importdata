@@ -67,7 +67,7 @@ if __name__ == "__main__":
                 if args.broker != None and args.port != None:
                     # publish message
                     print("Publishing to MQTT.")
-                    jsondata = json.dump(row)
+                    jsondata = json.dumps(row)
 
                     ret= client.publish("/data",jsondata)
 
