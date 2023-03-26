@@ -35,20 +35,22 @@ if __name__ == "__main__":
         if args.broker != None and args.port != None:
             broker=args.broker
 
-            mqtt.Client.bad_connection_flag=False
+           
 
             # and convert string to int as docker env vars must be string
             port=int(args.port)
 
             client= mqtt.Client()
             client.on_publish = on_publish
-            client.connect(broker,port)
+            client.connect(broker,port,)
 
-             #
+            client.bad_connection_flag=False
+            client.connected_flag = False
+
             while not client.connected_flag and not client.bad_connection_flag: #wait in loop
                 print("In wait loop")
                 time.sleep(1)
-                
+
             if client.bad_connection_flag:
                 client.loop_stop()    #Stop loop
                 sys.exit()
