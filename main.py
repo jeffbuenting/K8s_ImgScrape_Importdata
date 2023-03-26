@@ -42,18 +42,18 @@ if __name__ == "__main__":
 
             client= mqtt.Client()
             client.on_publish = on_publish
-            client.connect(broker,port,)
+            client.connect(broker,port)
 
-            client.bad_connection_flag=False
-            client.connected_flag = False
+            # client.bad_connection_flag=False
+            # client.connected_flag = False
 
-            while not client.connected_flag and not client.bad_connection_flag: #wait in loop
-                print("In wait loop")
-                time.sleep(1)
+            # while not client.connected_flag and not client.bad_connection_flag: #wait in loop
+            #     print("In wait loop")
+            #     time.sleep(1)
 
-            if client.bad_connection_flag:
-                client.loop_stop()    #Stop loop
-                sys.exit()
+            # if client.bad_connection_flag:
+            #     client.loop_stop()    #Stop loop
+            #     sys.exit()
 
         else:
             print("MQTT broker or port is missing. writing file contents only.")
