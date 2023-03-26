@@ -2,7 +2,7 @@ import csv
 import paho.mqtt.client as mqtt
 import argparse, sys
 import time
-
+        
 def on_publish(client,userdata,result):
     print("Device 1 : Data published.")
     pass
@@ -26,12 +26,14 @@ if __name__ == "__main__":
 
         if args.broker != None and args.port != None:
             broker=args.broker
+
             # and convert string to int as docker env vars must be string
             port=int(args.port)
 
-            client= mqtt.Client("admin")
+            client= mqtt.Client()
             client.on_publish = on_publish
             client.connect(broker,port)
+
         else:
             print("MQTT broker or port is missing. writing file contents only.")
         
