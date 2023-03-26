@@ -2,6 +2,7 @@ import csv
 import paho.mqtt.client as mqtt
 import argparse, sys
 import time
+import json
         
 def on_connect(client, userdata, flags, rc):
     if rc==0:
@@ -66,7 +67,9 @@ if __name__ == "__main__":
                 if args.broker != None and args.port != None:
                     # publish message
                     print("Publishing to MQTT.")
-                    ret= client.publish("/data",row)
+                    jsondata = json.dump(row)
+
+                    ret= client.publish("/data",jsondata)
 
     else:
         raise Exception("Missing required input")
