@@ -69,7 +69,7 @@ if __name__ == "__main__":
                     print("Publishing to MQTT.")
                     jsondata = json.dumps(row)
 
-                    ret= client.publish("/data",jsondata)
+                    ret= client.publish("/imgscrape/input",jsondata)
 
     else:
         raise Exception("Missing required input")
