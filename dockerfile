@@ -10,8 +10,9 @@ COPY main.py /code
 RUN pip install -r requirements.txt
 
 # default env vars
-ENV BROKERHOST ""
-ENV PORT ""
+ENV RETAINFLAG = 'False'
+ENV CLEANSESSIONFLAG = 'True'
 
-ENTRYPOINT ["/bin/bash", "-c", "python -u main.py --inputfile $INPUTFILE --broker $BROKERHOST --port $PORT"]
+
+ENTRYPOINT ["/bin/bash", "-c", "python -u main.py --inputfile $INPUTFILE --broker $BROKERHOST --port $PORT --retainflag $RETAINFLAG --cleansessionflag $CLEANSESSIONFLAG"]
 
